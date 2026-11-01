@@ -22,6 +22,11 @@ class TestCalculadoraDescontoTDD(unittest.TestCase):
     def test_desconto_vip(self):
         resultado = self.calc.calcular_valor_final(600, True)
         self.assertEqual(resultado, 513)
+    
+    def test_frete(self):
+        resultado = self.calc.calcular_valor_final(80, False)
+        self.assertEqual(resultado, 95)
+
 
 if __name__ == "__main__":
     unittest.main
