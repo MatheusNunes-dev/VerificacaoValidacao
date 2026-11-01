@@ -14,6 +14,10 @@ class TestCalculadoraDescontoTDD(unittest.TestCase):
     def test_desconto_10_porcento(self):
         resultado = self.calc.calcular_valor_final(600, False)
         self.assertEqual(resultado, 540)
+    
+    def test_desconto_20_porcento(self):
+        resultado = self.calc.calcular_valor_final(1200, False)
+        self.assertEqual(resultado, 960)
 
 
 if __name__ == "__main__":
