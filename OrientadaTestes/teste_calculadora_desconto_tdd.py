@@ -27,6 +27,14 @@ class TestCalculadoraDescontoTDD(unittest.TestCase):
         resultado = self.calc.calcular_valor_final(80, False)
         self.assertEqual(resultado, 95)
 
+    def test_valor_zero(self):
+        with self.assertRaises(ValueError):
+            self.calc.calcular_valor_final(0, False)
+
+    def test_valor_negativo(self):
+        with self.assertRaises(ValueError):
+            self.calc.calcular_valor_final(-50, False)
+
 
 if __name__ == "__main__":
     unittest.main
