@@ -1,5 +1,9 @@
 class CalculadoraDescontoTDD:
     def calcular_valor_final(self, valor_itens, vip):
+
+        if valor_itens <= 0:
+            raise ValueError("O valor dos itens deve ser maior que zero.")
+
         valor_final = valor_itens
 
         if valor_itens > 1000:
